@@ -11,8 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="images/A.png">
   <link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
-  
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#shop">Skip to products</a>
@@ -48,30 +47,17 @@
   </header>
 
   <main id="top">
-<section class="hero hero-photo">
-  <div class="container hero-copy">
-    <h1>Find the instrument that sounds like you.</h1>
-    <p class="hero-sub">New and pre-owned guitars, keyboards, drums and strings.</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="#shop">Shop instruments</a>
-      <a class="btn btn-link" href="#visit">Visit the store</a>
-    </div>
-  </div>
-</section>
     <!-- HERO -->
-    <!--<section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1>Find the instrument that sounds like you.</h1>
-          <p class="hero-sub">New and pre-owned guitars, keyboards, drums and strings. Try them in the shop, or order online.</p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="#shop">Shop instruments</a>
-            <a class="btn btn-link" href="#visit">Visit the store</a>
-          </div>
+    <section class="hero hero-photo">
+      <div class="container hero-copy">
+        <h1>Find the instrument that sounds like you.</h1>
+        <p class="hero-sub">New and pre-owned guitars, keyboards, drums and strings.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#shop">Shop instruments</a>
+          <a class="btn btn-link" href="#visit">Visit the store</a>
         </div>
-        <img class="hero-img" src="images/services_guitar.jpeg" alt="Row of electric guitars on display" width="1600" height="900">
       </div>
-    </section>--->
+    </section>
 
     <div class="info-bar">
       <div class="container info-grid">
@@ -86,7 +72,7 @@
       <div class="container about-grid">
         <div class="about-photo">
           <img src="images/home2.jpeg" alt="Inside the Harmony Sound Hub shop" loading="lazy">
-                  </div>
+        </div>
         <div class="about-copy">
           <h2>From a suburban garage to a full music hub</h2>
           <p class="lead">Harmony Sound Hub started in 2010 as a small recording studio, built by musicians and audio engineers who wanted every artist to have access to great, affordable sound.</p>
@@ -258,22 +244,22 @@
           <p class="contact-line">Phone: <a href="tel:+639953183352">0995 318 3352</a></p>
         </div>
 
-      <form id="contact-form" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-  <input type="hidden" name="form-name" value="contact">
-  <p class="visually-hidden"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-  <label for="name">Your name</label>
-  <input id="name" name="name" type="text" autocomplete="name" required>
-  <label for="email">Email</label>
-  <input id="email" name="email" type="email" autocomplete="email" required>
-  <label for="phone">Mobile number <span class="opt">(optional)</span></label>
-  <input id="phone" name="phone" type="tel" autocomplete="tel">
-  <label for="message">Message</label>
-  <textarea id="message" name="message" rows="5" required></textarea>
-  <p class="form-error" id="form-error" role="alert" hidden></p>
-  <p class="form-ok" id="form-ok" role="status" hidden></p>
-  <button class="btn btn-primary" type="submit">Send message</button>
-  <button class="btn btn-primary" id="checkout-btn" type="button">Checkout</button>
-</form>
+        <form id="contact-form" class="contact-form" novalidate>
+          <input type="hidden" name="access_key" value="a00c82e0-73cf-4b18-840a-8696110e80e2">
+          <input type="hidden" name="subject" value="New message from Harmony Sound Hub">
+          <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+          <label for="phone">Mobile number <span class="opt">(optional)</span></label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <p class="form-ok" id="form-ok" role="status" hidden></p>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
       </div>
     </section>
   </main>
@@ -286,46 +272,47 @@
       </ul>
     </div>
   </footer>
-<!---CART-->
-<div class="order-modal" id="order-modal" role="dialog" aria-modal="true" aria-labelledby="order-title" hidden>
-  <div class="order-panel">
-    <div class="cart-head">
-      <h2 id="order-title">Place your order</h2>
-      <button class="cart-close" id="order-close" type="button" aria-label="Close">&times;</button>
-    </div>
-    <form id="order-form" class="contact-form order-form" name="order" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-      <input type="hidden" name="form-name" value="order">
-      <p class="visually-hidden"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-      <input type="hidden" name="order_items" id="f-items">
-      <input type="hidden" name="order_total" id="f-total">
-      <input type="hidden" name="down_payment" id="f-down">
-      <div class="order-summary" id="order-summary"></div>
-      <label for="o-name">Full name</label>
-      <input id="o-name" name="name" type="text" autocomplete="name" required>
-      <label for="o-phone">Mobile number</label>
-      <input id="o-phone" name="phone" type="tel" autocomplete="tel" required>
-      <label for="o-email">Email</label>
-      <input id="o-email" name="email" type="email" autocomplete="email" required>
-      <label for="o-address">Complete address</label>
-      <textarea id="o-address" name="address" rows="3" autocomplete="street-address" required></textarea>
-      <label for="o-delivery">Delivery or pickup</label>
-      <select id="o-delivery" name="delivery"><option>Delivery</option><option>Pickup at the store</option></select>
-      <div class="pay-box">
-        <p><strong>Pay the 15% down payment by GCash</strong> to reserve your order. The balance is paid on delivery or pickup.</p>
-        <p class="pay-info" id="pay-info"></p>
-        <p class="demo-note" id="demo-note">Sample store: this is a demo, so please do not send real payments.</p>
+
+  <!-- ORDER FORM -->
+  <div class="order-modal" id="order-modal" role="dialog" aria-modal="true" aria-labelledby="order-title" hidden>
+    <div class="order-panel">
+      <div class="cart-head">
+        <h2 id="order-title">Place your order</h2>
+        <button class="cart-close" id="order-close" type="button" aria-label="Close">&times;</button>
       </div>
-      <input type="hidden" name="payment_method" value="GCash">
-      <label for="o-ref">GCash reference number</label>
-      <input id="o-ref" name="payment_reference" type="text" required>
-      <label for="o-proof">Payment screenshot <span class="opt">(optional)</span></label>
-      <input id="o-proof" name="payment_proof" type="file" accept="image/*">
-      <p class="form-error" id="order-error" role="alert" hidden></p>
-      <button class="btn btn-primary" id="order-submit" type="submit">Place order</button>
-    </form>
+      <form id="order-form" class="contact-form order-form" novalidate>
+        <input type="hidden" name="access_key" value="a00c82e0-73cf-4b18-840a-8696110e80e2">
+        <input type="hidden" name="subject" value="New order from Harmony Sound Hub">
+        <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="order_items" id="f-items">
+        <input type="hidden" name="order_total" id="f-total">
+        <input type="hidden" name="down_payment" id="f-down">
+        <div class="order-summary" id="order-summary"></div>
+        <label for="o-name">Full name</label>
+        <input id="o-name" name="name" type="text" autocomplete="name" required>
+        <label for="o-phone">Mobile number</label>
+        <input id="o-phone" name="phone" type="tel" autocomplete="tel" required>
+        <label for="o-email">Email</label>
+        <input id="o-email" name="email" type="email" autocomplete="email" required>
+        <label for="o-address">Complete address</label>
+        <textarea id="o-address" name="address" rows="3" autocomplete="street-address" required></textarea>
+        <label for="o-delivery">Delivery or pickup</label>
+        <select id="o-delivery" name="delivery"><option>Delivery</option><option>Pickup at the store</option></select>
+        <div class="pay-box">
+          <p><strong>Pay the 15% down payment by GCash</strong> to reserve your order. The balance is paid on delivery or pickup.</p>
+          <p class="pay-info" id="pay-info"></p>
+          <p class="demo-note" id="demo-note">Sample store: this is a demo, so please do not send real payments.</p>
+        </div>
+        <input type="hidden" name="payment_method" value="GCash">
+        <label for="o-ref">GCash reference number</label>
+        <input id="o-ref" name="payment_reference" type="text" required>
+        <p class="form-error" id="order-error" role="alert" hidden></p>
+        <button class="btn btn-primary" id="order-submit" type="submit">Place order</button>
+      </form>
+    </div>
   </div>
-</div>
-<!---CART DRAWER-->
+
+  <!-- CART DRAWER -->
   <div class="cart-overlay" id="cart-overlay"></div>
   <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
     <div class="cart-head">
@@ -336,12 +323,10 @@
     <ul class="cart-items" id="cart-items"></ul>
     <div class="cart-foot" id="cart-foot">
       <div class="cart-total"><span>Total</span><strong id="cart-total">₱0</strong></div>
-      <button class="btn btn-primary" id="checkout-btn" type="button">Send order by email</button>
+      <button class="btn btn-primary" id="checkout-btn" type="button">Checkout</button>
       <button class="cart-clear" id="cart-clear" type="button">Clear cart</button>
     </div>
   </aside>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  
 </body>
 </html>
