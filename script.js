@@ -4,12 +4,10 @@
   var peso = function (n) { return "₱" + n.toLocaleString("en-PH"); };
   $("#year").textContent = new Date().getFullYear();
 
-  /* Hide broken images so the fallback or dark background shows instead */
   $$("img").forEach(function (img) {
     img.addEventListener("error", function () { img.style.visibility = "hidden"; });
   });
 
-  /* Mobile nav */
   var navToggle = $("#nav-toggle"), nav = $("#site-nav");
   function setNav(open) {
     nav.classList.toggle("is-open", open);
@@ -19,7 +17,6 @@
   navToggle.addEventListener("click", function () { setNav(!nav.classList.contains("is-open")); });
   $$(".nav-links a").forEach(function (a) { a.addEventListener("click", function () { setNav(false); }); });
 
-  /* Highlight current section in nav */
   var links = $$(".nav-links a");
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
@@ -27,49 +24,11 @@
         if (e.isIntersecting) {
           links.forEach(function (l) { l.classList.toggle("is-current", l.getAttribute("href") === "#" + e.target.id); });
         }
-
-        const form = document.getElementById('form');
-const submitBtn = form.querySelector('button[type="submit"]');
-
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    formData.append("access_key", "a00c82e0-73cf-4b18-840a-8696110e80e2");
-
-    const originalText = submitBtn.textContent;
-
-    submitBtn.textContent = "Sending...";
-    submitBtn.disabled = true;
-
-    try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-            alert("Success! Your message has been sent.");
-            form.reset();
-        } else {
-            alert("Error: " + data.message);
-        }
-
-    } catch (error) {
-        alert("Something went wrong. Please try again.");
-    } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }
-});
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
     $$("main section[id]").forEach(function (s) { io.observe(s); });
   }
 
-  /* Shop: filter, search, sort */
   var grid = $("#product-grid"), products = $$(".product", grid);
   products.forEach(function (p, i) { p.dataset.order = i; });
   var filter = "all";
@@ -96,14 +55,12 @@ form.addEventListener('submit', async (e) => {
   $("#search").addEventListener("input", applyShop);
   $("#sort").addEventListener("change", applyShop);
 
-  /* Toast */
   var toast = $("#toast"), toastTimer;
   function showToast(msg) {
     toast.textContent = msg; toast.classList.add("is-show");
     clearTimeout(toastTimer); toastTimer = setTimeout(function () { toast.classList.remove("is-show"); }, 2200);
   }
 
-  /* Cart */
   var cart = [];
   try { cart = JSON.parse(localStorage.getItem("hr-cart") || "[]"); } catch (e) { cart = []; }
   function save() { try { localStorage.setItem("hr-cart", JSON.stringify(cart)); } catch (e) {} }
@@ -154,12 +111,13 @@ form.addEventListener('submit', async (e) => {
   });
   $("#cart-clear").addEventListener("click", function () { cart = []; update(); });
 
-  /* Orders and messages are sent to Netlify Forms */
   var DEMO = true; /* set to false when the store goes live */
   var PAY_INFO = "GCash 09XX XXX XXXX (account name)";
   var DOWN_RATE = 0.15;
   function send(form) {
-    return fetch("/", { method: "POST", body: new FormData(form) }).then(function (r) { if (!r.ok) throw new Error(r.status); });
+    return fetch("https://api.web3forms.com/submit", { method: "POST", body: new FormData(form) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) { if (!d.success) throw new Error(d.message); });
   }
   var modal = $("#order-modal"), orderForm = $("#order-form");
   function openOrder(open) {
@@ -215,7 +173,6 @@ form.addEventListener('submit', async (e) => {
     }).then(function () { btn.disabled = false; btn.textContent = "Place order"; });
   });
 
-  /* Open / closed status, store time */
   var HOURS = { 0: [12, 18], 1: [10, 19], 2: [10, 19], 3: [10, 19], 4: [10, 19], 5: [10, 19], 6: [10, 20] };
   function clock(h) { return (h % 12 || 12) + (h < 12 ? " am" : " pm"); }
   var manila = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Manila" }));
@@ -223,7 +180,6 @@ form.addEventListener('submit', async (e) => {
   $("#open-status").textContent = hr >= t[0] && hr < t[1] ? "Open until " + clock(t[1])
     : hr < t[0] ? "Opens at " + clock(t[0]) : "Closed, opens " + clock(HOURS[(day + 1) % 7][0]) + " tomorrow";
 
-  /* Contact form */
   $("#contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
     var err = $("#form-error"), ok = $("#form-ok");
