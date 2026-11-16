@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harmony Sound Hub | Instruments, Lessons, Repairs &amp; Audio</title>
+  <meta name="description" content="Harmony Sound Hub sells guitars, keyboards, drums and strings, with lessons, repairs and audio installation in-store.">
+  <meta name="theme-color" content="#f6f3ec">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/A.png">
+  <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+  
+</head>
+<body>
+  <a class="skip-link" href="#shop">Skip to products</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Harmony Sound Hub, home">
+        <img class="logo-img" src="images/A.png" alt="" width="48" height="48">
+        <span>Harmony Sound Hub</span>
+      </a>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#visit">Visit us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="cart-btn" type="button" aria-label="Cart, 0 items" aria-haspopup="dialog" aria-controls="cart-drawer" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 7H6"/></svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+<section class="hero hero-photo">
+  <div class="container hero-copy">
+    <h1>Find the instrument that sounds like you.</h1>
+    <p class="hero-sub">New and pre-owned guitars, keyboards, drums and strings.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#shop">Shop instruments</a>
+      <a class="btn btn-link" href="#visit">Visit the store</a>
+    </div>
+  </div>
+</section>
+    <!-- HERO -->
+    <!--<section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Find the instrument that sounds like you.</h1>
+          <p class="hero-sub">New and pre-owned guitars, keyboards, drums and strings. Try them in the shop, or order online.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#shop">Shop instruments</a>
+            <a class="btn btn-link" href="#visit">Visit the store</a>
+          </div>
+        </div>
+        <img class="hero-img" src="images/services_guitar.jpeg" alt="Row of electric guitars on display" width="1600" height="900">
+      </div>
+    </section>--->
+
+    <div class="info-bar">
+      <div class="container info-grid">
+        <p><span>Find us</span>Boni Avenue, Mandaluyong City</p>
+        <p><span>Today</span><b id="open-status">See hours below</b></p>
+        <p><span>Call</span><a href="tel:+639953183352">0995 318 3352</a></p>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-photo">
+          <img src="images/home2.jpeg" alt="Inside the Harmony Sound Hub shop" loading="lazy">
+                  </div>
+        <div class="about-copy">
+          <h2>From a suburban garage to a full music hub</h2>
+          <p class="lead">Harmony Sound Hub started in 2010 as a small recording studio, built by musicians and audio engineers who wanted every artist to have access to great, affordable sound.</p>
+          <p>Over the years we grew from that garage into a multi-facility hub that serves rising talents and established artists alike. We blend the analog warmth of vintage gear with modern digital equipment, so the sound you get is as unique as you are.</p>
+          <p>Today we are a music store, a repair bench and a teaching space, working with players across every genre.</p>
+          <ul class="facts">
+            <li><strong>2010</strong><span>Year we opened</span></li>
+            <li><strong>4</strong><span>Instrument families in stock</span></li>
+            <li><strong>3&ndash;5 days</strong><span>Typical repair time</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section class="section section-tint" id="shop">
+      <div class="container">
+        <div class="section-head">
+          <h2>Shop instruments</h2>
+          <p>Every instrument is checked and set up by our techs before it ships.</p>
+        </div>
+
+        <div class="shop-tools">
+          <div class="filters" role="group" aria-label="Filter by category">
+            <button class="chip is-active" type="button" data-filter="all">All</button>
+            <button class="chip" type="button" data-filter="guitars">Guitars</button>
+            <button class="chip" type="button" data-filter="keys">Keys</button>
+            <button class="chip" type="button" data-filter="drums">Drums</button>
+            <button class="chip" type="button" data-filter="strings">Strings &amp; more</button>
+          </div>
+          <div class="shop-controls">
+            <label><span class="visually-hidden">Search instruments</span><input type="search" id="search" placeholder="Search instruments"></label>
+            <label><span class="visually-hidden">Sort instruments</span>
+              <select id="sort">
+                <option value="default">Featured</option>
+                <option value="low">Price: low to high</option>
+                <option value="high">Price: high to low</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <p class="shop-count" id="shop-count" aria-live="polite"></p>
+        <div class="product-grid" id="product-grid">
+          <article class="product" data-price="12500" data-category="guitars" data-name="Dreadnought Acoustic Guitar">
+            <div class="product-img"><img src="images/Dreadnought_Acoustic_Guitar.jpg" alt="Dreadnought acoustic guitar" width="800" height="600" loading="lazy"></div>
+            <div class="product-body"><h3>Dreadnought Acoustic Guitar</h3><p class="product-meta">Spruce top, mahogany back and sides</p>
+              <div class="product-foot"><span class="price">₱12,500</span><button class="btn btn-small add-to-cart" type="button">Add to cart</button></div></div>
+          </article>
+          <article class="product" data-price="18900" data-category="guitars" data-name="Stratocaster-Style Electric Guitar">
+            <div class="product-img"><img src="images/electric-guitar.jpg" alt="Electric guitar" width="800" height="600" loading="lazy"></div>
+            <div class="product-body"><h3>Stratocaster-Style Electric Guitar</h3><p class="product-meta">Three single-coil pickups, maple neck</p>
+              <div class="product-foot"><span class="price">₱18,900</span><button class="btn btn-small add-to-cart" type="button">Add to cart</button></div></div>
+          </article>
+          <article class="product" data-price="16200" data-category="guitars" data-name="4-String Bass Guitar">
+            <div class="product-img"><img src="images/Bass.jpg" alt="Bass guitar" width="800" height="600" loading="lazy"></div>
+            <div class="product-body"><h3>4-String Bass Guitar</h3><p class="product-meta">Active pickups, easy low action</p>
+              <div class="product-foot"><span class="price">₱16,200</span><button class="btn btn-small add-to-cart" type="button">Add to cart</button></div></div>
+          </article>
+          <article class="product" data-price="34000" data-category="keys" data-name="88-Key Digital Piano">
+            <div class="product-img"><img src="images/digital-piano.jpg" alt="88-key digital piano" width="800" height="600" loading="lazy"></div>
+            <div class="product-body"><h3>88-Key Digital Piano</h3><p class="product-meta">Weighted keys, built-in speakers</p>
+              <div class="product-foot"><span class="price">₱34,000</span><button class="btn btn-small add-to-cart" type="button">Add to cart</button></div></div>
+          </article>
+          <article class="product" data-price="7800" data-category="keys" data-name="61-Key Portable Keyboard">
+            <div class="product-img"><img src="images/keyboard.jpg" alt="61-key portable keyboard" width="800" height="600" loading="lazy"></div>
+            <div class="product-body"><h3>61-Key Portable Keyboard</h3><p class="product-meta">Great for beginners and practice</p>
+              <div class="product-foot"><span class="price">₱7,800</span><button class="btn btn-small add-to-cart" type="button">Add to cart</button></div></div>
+          </article>
+          <article class="product" data-price="28500" data-category="drums" data-name="5-Piece Drum Set">
+            <div class="product-img"><img src="images/drum-set.jpg" alt="5-piece drum set" width="800" height="600" loading="lazy"></div>
+            <div class="product-body"><h3>5-Piece Drum Set</h3><p class="product-meta">Includes hardware, cymbals and throne</p>
+              <div class="product-foot"><span class="price">₱28,500</span><button class="btn btn-small add-to-cart" type="button">Add to cart</button></div></div>
+          </article>
+          <article class="product" data-price="4200" data-category="drums" data-name="Cajon">
+            <div class="product-img"><img src="images/cajon.jpg" alt="Wooden cajon" width="800" height="600" loading="lazy"></div>
+            <div class="product-body"><h3>Cajon</h3><p class="product-meta">Birch body with adjustable snare</p>
+              <div class="product-foot"><span class="price">₱4,200</span><button class="btn btn-small add-to-cart" type="button">Add to cart</button></div></div>
+          </article>
+          <article class="product" data-price="3600" data-category="strings" data-name="Concert Ukulele">
+            <div class="product-img"><img src="images/ukulele.jpg" alt="Concert ukulele" width="800" height="600" loading="lazy"></div>
+            <div class="product-body"><h3>Concert Ukulele</h3><p class="product-meta">Light, bright and easy to learn</p>
+              <div class="product-foot"><span class="price">₱3,600</span><button class="btn btn-small add-to-cart" type="button">Add to cart</button></div></div>
+          </article>
+          <article class="product" data-price="9400" data-category="strings" data-name="4/4 Violin Outfit">
+            <div class="product-img"><img src="images/violin.jpg" alt="Violin with bow and case" width="800" height="600" loading="lazy"></div>
+            <div class="product-body"><h3>4/4 Violin Outfit</h3><p class="product-meta">Comes with bow, rosin and case</p>
+              <div class="product-foot"><span class="price">₱9,400</span><button class="btn btn-small add-to-cart" type="button">Add to cart</button></div></div>
+          </article>
+        </div>
+        <p class="empty-state" id="empty-state" hidden>No instruments match that search. Try a different word or choose All.</p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p>Buying is only the start. We help you choose, learn and keep it sounding right.</p>
+        </div>
+
+        <div class="service-list">
+          <article class="service">
+            <div class="service-img"><img src="images/services_guitar.jpeg" alt="Row of electric guitars on display" loading="lazy"></div>
+            <div class="service-body"><h3>Instrument sales</h3><p>A wide range of guitars, drums, keyboards, wind instruments and more, for beginners through working players.</p></div>
+          </article>
+          <article class="service">
+            <div class="service-img"><img src="images/guitar_repair.jpeg" alt="Technician repairing a guitar" loading="lazy"></div>
+            <div class="service-body"><h3>Repair and maintenance</h3><p>Our in-house technicians restring, set up and repair instruments. Most jobs are done in three to five days.</p></div>
+          </article>
+          <article class="service">
+            <div class="service-img"><img src="images/audio_equipment.jpeg" alt="Mixing console" loading="lazy"></div>
+            <div class="service-body"><h3>Audio equipment and installation</h3><p>Sound systems for home studios, venues and personal use, with professional installation available.</p></div>
+          </article>
+        </div>
+
+        <div class="service-extra">
+          <div><h3>Private lessons</h3><p>One-on-one sessions for guitar, keys, drums and violin. Beginners welcome. Weekday evenings and Saturdays.</p></div>
+          <div><h3>Monthly rentals</h3><p>Not sure yet? Rent a student instrument by the month and put the rent toward buying it.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section section-dark" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <h2>From the shop floor</h2>
+          <p>Instruments, mics and studio gear you can try in store.</p>
+        </div>
+        <div class="gallery">
+          <figure class="gallery-item"><img src="images/Instrument.jpeg" alt="Bass headstock beside sheet music and a pedalboard" loading="lazy"><figcaption>Bass and pedalboard</figcaption></figure>
+          <figure class="gallery-item"><img src="images/Instrument1.jpeg" alt="Distortion pedal next to a guitar fretboard" loading="lazy"><figcaption>Pedals and guitars</figcaption></figure>
+          <figure class="gallery-item"><img src="images/instrument2jpeg.jpeg" alt="Electric guitar on the floor beside an overdrive pedal" loading="lazy"><figcaption>Electric guitars</figcaption></figure>
+          <figure class="gallery-item"><img src="images/home.jpeg" alt="Sound engineer working on a lighting and mixing console" loading="lazy"><figcaption>Live sound and lighting</figcaption></figure>
+          <figure class="gallery-item"><img src="images/home1.jpeg" alt="Studio condenser microphone in a shock mount" loading="lazy"><figcaption>Studio microphones</figcaption></figure>
+          <figure class="gallery-item"><img src="images/home3.jpeg" alt="Headphones beside a condenser microphone" loading="lazy"><figcaption>Headphones and mics</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="section" id="visit">
+      <div class="container visit-grid">
+        <div>
+          <h2>Visit the store</h2>
+          <p class="visit-lead">Come play before you buy. Our staff will help you find the right fit and budget.</p>
+          <address>Boni Avenue<br>Mandaluyong City, Philippines</address>
+        </div>
+        <table class="hours">
+          <caption class="visually-hidden">Opening hours</caption>
+          <tbody>
+            <tr><th scope="row">Monday to Friday</th><td>10:00 am to 7:00 pm</td></tr>
+            <tr><th scope="row">Saturday</th><td>10:00 am to 8:00 pm</td></tr>
+            <tr><th scope="row">Sunday</th><td>12:00 pm to 6:00 pm</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-tint" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2>Questions, stock checks, orders</h2>
+          <p class="visit-lead">Need help choosing, or want to check stock? Send a message and we will reply within one business day.</p>
+          <p class="contact-line">Email: <a href="mailto:lagubanarowel@gmail.com">lagubanarowel@gmail.com</a></p>
+          <p class="contact-line">Phone: <a href="tel:+639953183352">0995 318 3352</a></p>
+        </div>
+
+      <form id="contact-form" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+  <input type="hidden" name="form-name" value="contact">
+  <p class="visually-hidden"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+  <label for="name">Your name</label>
+  <input id="name" name="name" type="text" autocomplete="name" required>
+  <label for="email">Email</label>
+  <input id="email" name="email" type="email" autocomplete="email" required>
+  <label for="phone">Mobile number <span class="opt">(optional)</span></label>
+  <input id="phone" name="phone" type="tel" autocomplete="tel">
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+  <p class="form-error" id="form-error" role="alert" hidden></p>
+  <p class="form-ok" id="form-ok" role="status" hidden></p>
+  <button class="btn btn-primary" type="submit">Send message</button>
+  <button class="btn btn-primary" id="checkout-btn" type="button">Checkout</button>
+</form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Harmony Sound Hub. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </div>
+  </footer>
+<!---CART-->
+<div class="order-modal" id="order-modal" role="dialog" aria-modal="true" aria-labelledby="order-title" hidden>
+  <div class="order-panel">
+    <div class="cart-head">
+      <h2 id="order-title">Place your order</h2>
+      <button class="cart-close" id="order-close" type="button" aria-label="Close">&times;</button>
+    </div>
+    <form id="order-form" class="contact-form order-form" name="order" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="order">
+      <p class="visually-hidden"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <input type="hidden" name="order_items" id="f-items">
+      <input type="hidden" name="order_total" id="f-total">
+      <input type="hidden" name="down_payment" id="f-down">
+      <div class="order-summary" id="order-summary"></div>
+      <label for="o-name">Full name</label>
+      <input id="o-name" name="name" type="text" autocomplete="name" required>
+      <label for="o-phone">Mobile number</label>
+      <input id="o-phone" name="phone" type="tel" autocomplete="tel" required>
+      <label for="o-email">Email</label>
+      <input id="o-email" name="email" type="email" autocomplete="email" required>
+      <label for="o-address">Complete address</label>
+      <textarea id="o-address" name="address" rows="3" autocomplete="street-address" required></textarea>
+      <label for="o-delivery">Delivery or pickup</label>
+      <select id="o-delivery" name="delivery"><option>Delivery</option><option>Pickup at the store</option></select>
+      <div class="pay-box">
+        <p><strong>Pay the 15% down payment by GCash</strong> to reserve your order. The balance is paid on delivery or pickup.</p>
+        <p class="pay-info" id="pay-info"></p>
+        <p class="demo-note" id="demo-note">Sample store: this is a demo, so please do not send real payments.</p>
+      </div>
+      <input type="hidden" name="payment_method" value="GCash">
+      <label for="o-ref">GCash reference number</label>
+      <input id="o-ref" name="payment_reference" type="text" required>
+      <label for="o-proof">Payment screenshot <span class="opt">(optional)</span></label>
+      <input id="o-proof" name="payment_proof" type="file" accept="image/*">
+      <p class="form-error" id="order-error" role="alert" hidden></p>
+      <button class="btn btn-primary" id="order-submit" type="submit">Place order</button>
+    </form>
+  </div>
+</div>
+<!---CART DRAWER-->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="cart-head">
+      <h2 id="cart-title">Your cart</h2>
+      <button class="cart-close" id="cart-close" type="button" aria-label="Close cart">&times;</button>
+    </div>
+    <p class="cart-empty" id="cart-empty">Nothing in your cart yet.</p>
+    <ul class="cart-items" id="cart-items"></ul>
+    <div class="cart-foot" id="cart-foot">
+      <div class="cart-total"><span>Total</span><strong id="cart-total">₱0</strong></div>
+      <button class="btn btn-primary" id="checkout-btn" type="button">Send order by email</button>
+      <button class="cart-clear" id="cart-clear" type="button">Clear cart</button>
+    </div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  
+</body>
+</html>
